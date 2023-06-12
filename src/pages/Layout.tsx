@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { Outlet, Link } from "react-router-dom";
-import { MantineProvider, ColorSchemeProvider, ColorScheme  } from '@mantine/core'
+import { Outlet } from "react-router-dom";
+import { MantineProvider, ColorSchemeProvider, ColorScheme, BackgroundImage  } from '@mantine/core'
 import { HeaderMiddle } from "../components/HeaderMiddle";
 import { FooterLinks } from "../components/FooterLinks";
-import data from "../assets/attributes.json"
+import { linkData } from "../assets/linkData";
+import { footerData } from "../assets/footerData";
+
 
 const Layout = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -13,83 +15,19 @@ const Layout = () => {
   return (
     <>
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-    <MantineProvider theme={{ colorScheme }} withGlobalStyles withNormalizeCSS>
-      <HeaderMiddle links={
-                        [{
-                            "link": "/about",
-                            "label": "Home"
-                            },
-                            {
-                            "link": "/learn",
-                            "label": "Features"
-                            },
-                            {
-                            "link": "/pricing",
-                            "label": "Pricing"
-                            }]
-                        }></HeaderMiddle>
+    <MantineProvider theme={{ 
+      colorScheme,
+      fontFamily: 'Consolas',
+      white: '#DFDBE5',
+      cursorType: 'default',
+      colors: {
+        brand: ['#f6e4ff','#dbb4ff','#c583fc','#b252f9','#a322f6','#9009dd','#6505ad','#40027d','#21004d','#0b001f'],
+      },
+      primaryColor: 'brand',
+      }} withGlobalStyles withNormalizeCSS>
+      <HeaderMiddle links = { linkData }></HeaderMiddle>
       <Outlet />
-      <FooterLinks data={[{
-      "title": "About",
-      "links": [
-        {
-          "label": "Features",
-          "link": "#"
-        },
-        {
-          "label": "Pricing",
-          "link": "#"
-        },
-        {
-          "label": "Support",
-          "link": "#"
-        },
-        {
-          "label": "Forums",
-          "link": "#"
-        }
-      ]
-    },
-    {
-      "title": "Project",
-      "links": [
-        {
-          "label": "Contribute",
-          "link": "#"
-        },
-        {
-          "label": "Media assets",
-          "link": "#"
-        },
-        {
-          "label": "Changelog",
-          "link": "#"
-        },
-        {
-          "label": "Releases",
-          "link": "#"
-        }
-      ]
-    },
-    {
-      "title": "Community",
-      "links": [
-        {
-          "label": "Join Discord",
-          "link": "#"
-        },
-        {
-          "label": "Follow on Twitter",
-          "link": "#"
-        },
-        {
-          "label": "Email newsletter",
-          "link": "#"
-        },
-        {
-          "label": "GitHub discussions",
-          "link": "#"
-        }]}]}></FooterLinks>
+      <FooterLinks data = { footerData }></FooterLinks>
     </MantineProvider>
     </ColorSchemeProvider>
     </>
