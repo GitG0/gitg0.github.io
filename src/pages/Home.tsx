@@ -1,9 +1,9 @@
-import { HeroBullets } from "../components/HeroBullets";
+import HomeScroll from "../components/HomeScroll";
 
 export default function Home(){
     return(
         <>
-            <HeroBullets></HeroBullets>
+            <HomeScroll></HomeScroll>
         </>
     );
 }

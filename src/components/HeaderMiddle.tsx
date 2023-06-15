@@ -3,7 +3,6 @@ import { createStyles, Header, Group, ActionIcon, Container, Burger, rem, Transi
 import { useDisclosure } from '@mantine/hooks';
 import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
 import ThemeToggle from './ThemeToggle';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
 const HEADER_HEIGHT = rem(56);
