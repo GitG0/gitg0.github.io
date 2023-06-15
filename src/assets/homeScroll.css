@@ -20,11 +20,11 @@
     font-weight: 900;
   }
   
-    @keyframes animate {
-        0% {
-            background-position: 0 0;
-        }
-        100% {
-            background-position: 0 10000%;
-        }  
+  @keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 10000%;
+    }  
   }
