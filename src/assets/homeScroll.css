@@ -11,7 +11,7 @@
     margin: 0;
     font-size: 300px;
     color: rgba(225,225,225, .01);
-    background-image: url("./homeCode2.png");
+    /* background-image: url("./homeCode2.png"); */
     background-repeat: repeat;
     -webkit-background-clip: text;
     animation: animate 150s ease-in-out infinite;

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createStyles, Header, Group, ActionIcon, Container, Burger, rem, Transition, Paper } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import ThemeToggle from './ThemeToggle';
 import { NavLink } from 'react-router-dom';
 
@@ -103,7 +103,6 @@ interface HeaderMiddleProps {
 
 export function HeaderMiddle({ links }: HeaderMiddleProps) {
   const [opened, { toggle }] = useDisclosure(false);
-  const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
@@ -137,13 +136,7 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size="1.1rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size="1.1rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size="1.1rem" stroke={1.5} />
+            <IconBrandGithub size="1.1rem" stroke={1.5} />
           </ActionIcon>
 
           <ThemeToggle></ThemeToggle>

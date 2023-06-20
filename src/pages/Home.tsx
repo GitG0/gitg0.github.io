@@ -72,7 +72,7 @@ export default function Home() {
 
         <Container size={640}>
           <Text size="xl" className={classes.description}>
-            Welcome to GitG0.io! Be sure to check out my portfolio and links below 👇
+            Welcome to GitG0.io👋!
           </Text>
         </Container>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Outlet } from "react-router-dom";
-import { MantineProvider, ColorSchemeProvider, ColorScheme, BackgroundImage  } from '@mantine/core'
+import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core'
 import { HeaderMiddle } from "../components/HeaderMiddle";
 import { FooterLinks } from "../components/FooterLinks";
 import { linkData } from "../assets/linkData";
