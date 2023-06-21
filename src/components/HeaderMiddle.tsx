@@ -136,7 +136,9 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandGithub size="1.1rem" stroke={1.5} />
+            <a href="https://github.com/GitG0"> 
+              <IconBrandGithub size="1.1rem" stroke={1.5} />
+            </a>
           </ActionIcon>
 
           <ThemeToggle></ThemeToggle>

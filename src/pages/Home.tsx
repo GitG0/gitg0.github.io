@@ -1,6 +1,7 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import HomeScroll from "../components/HomeScroll";
-import { Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
+import { Text, Container, Button, Overlay, createStyles, rem, BackgroundImage } from '@mantine/core';
+import meteor from "../assets/Meteor.svg"
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -8,10 +9,11 @@ const useStyles = createStyles((theme) => ({
     paddingBottom: rem(130),
     backgroundSize: 'cover',
     backgroundPosition: 'center',
+    backgroundImage: meteor,
 
     [theme.fn.smallerThan('xs')]: {
-      paddingTop: rem(80),
-      paddingBottom: rem(50),
+      paddingTop: rem(0),
+      paddingBottom: rem(30),
     },
   },
 
@@ -28,8 +30,8 @@ const useStyles = createStyles((theme) => ({
     textAlign: 'center',
 
     [theme.fn.smallerThan('xs')]: {
-      fontSize: theme.fontSizes.md,
-      textAlign: 'left',
+      fontSize: theme.fontSizes.lg,
+      textAlign: 'center',
     },
   },
 
@@ -40,14 +42,19 @@ const useStyles = createStyles((theme) => ({
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
 
-    [theme.fn.smallerThan('xs')]: {
-      flexDirection: 'column',
-    },
+    // [theme.fn.smallerThan('xs')]: {
+    //   flexDirection: 'column',
+    // },
   },
 
   control: {
     height: rem(42),
     fontSize: theme.fontSizes.md,
+  },
+
+  buttonLink: {
+    color: theme.colors[theme.primaryColor][0],
+    textDecoration: 'none',
 
     '&:not(:first-of-type)': {
       marginLeft: theme.spacing.md,
@@ -55,11 +62,11 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan('xs')]: {
       '&:not(:first-of-type)': {
-        marginTop: theme.spacing.md,
-        marginLeft: 0,
+        // marginTop: theme.spacing.md,
+        // marginLeft: 0,
       },
     },
-  },
+  }
 }));
 
 export default function Home() {
@@ -67,26 +74,31 @@ export default function Home() {
 
   return (
     <div className={classes.wrapper}>
+
       <div className={classes.inner}>
+        
         <HomeScroll></HomeScroll>
 
-        <Container size={640}>
+        <Container size={400}>
           <Text size="xl" className={classes.description}>
-            Welcome to GitG0.io👋! <br></br> 🚧 Under construction 🚧
+            🚧 Under construction 🚧
           </Text>
         </Container>
 
         <div className={classes.controls}>
-        <NavLink to="/about" className={classes.control}>
-          <Button size="lg">
-            About
-          </Button>
-        </NavLink>
-        <NavLink to="/portfolio" className={classes.control}>
-          <Button size="lg">
-          Portfolio
-          </Button>
-        </NavLink>
+        
+        <Link to="/about" className={classes.buttonLink}>
+				<Button size="lg" className={classes.control}>
+					About
+				</Button>
+			</Link>
+          
+            <Link to="/portfolio" className={classes.buttonLink}>
+				<Button size="lg" className={classes.control}>
+					Portfolio
+				</Button>
+            </Link>
+        {/* </NavLink> */}
         </div>
       </div>
     </div>

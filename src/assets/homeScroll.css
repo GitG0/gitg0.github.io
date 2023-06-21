@@ -8,13 +8,10 @@
   }
   
   .text-container h1{
-    margin: 0;
-    font-size: 300px;
     color: rgba(225,225,225, .01);
-    /* background-image: url("./homeCode2.png"); */
     background-repeat: repeat;
     -webkit-background-clip: text;
-    animation: animate 150s ease-in-out infinite;
+    animation: animate 200s ease-in-out infinite;
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
