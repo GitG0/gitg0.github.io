@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import HomeScroll from "../components/HomeScroll";
 import { Text, Container, Button, Overlay, createStyles, rem } from '@mantine/core';
 
@@ -24,7 +25,6 @@ const useStyles = createStyles((theme) => ({
   },
 
   description: {
-    color: '#000',
     textAlign: 'center',
 
     [theme.fn.smallerThan('xs')]: {
@@ -63,7 +63,7 @@ const useStyles = createStyles((theme) => ({
 }));
 
 export default function Home() {
-  const { classes, cx } = useStyles();
+  const { classes } = useStyles();
 
   return (
     <div className={classes.wrapper}>
@@ -72,17 +72,21 @@ export default function Home() {
 
         <Container size={640}>
           <Text size="xl" className={classes.description}>
-            Welcome to GitG0.io👋!
+            Welcome to GitG0.io👋! <br></br> 🚧 Under construction 🚧
           </Text>
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} size="lg">
+        <NavLink to="/about" className={classes.control}>
+          <Button size="lg">
             About
           </Button>
-          <Button className={classes.control} size="lg">
-            Portfolio
+        </NavLink>
+        <NavLink to="/portfolio" className={classes.control}>
+          <Button size="lg">
+          Portfolio
           </Button>
+        </NavLink>
         </div>
       </div>
     </div>

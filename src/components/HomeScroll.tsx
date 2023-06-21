@@ -3,7 +3,6 @@ import { useMantineColorScheme  } from '@mantine/core'
 import lightbg from "../assets/homeCodeLight.png"
 import darkbg from "../assets/homeCode2.png"
 
-
 export default function HomeScroll(){
     const { colorScheme } = useMantineColorScheme();
     const theme = colorScheme === 'dark';
