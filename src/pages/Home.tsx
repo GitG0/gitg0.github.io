@@ -1,15 +1,19 @@
 import { NavLink, Link } from "react-router-dom";
 import HomeScroll from "../components/HomeScroll";
-import { Text, Container, Button, Overlay, createStyles, rem, BackgroundImage } from '@mantine/core';
-import meteor from "../assets/Meteor.svg"
+import { Text, Container, Button, Overlay, createStyles, rem, BackgroundImage, Image, useMantineColorScheme } from '@mantine/core';
+import meteor from "../assets/Meteor.svg";
+import circuit from "../assets/CircuitBoard.svg";
+import circuitDark from "../assets/CircuitBoardDark.svg";
+import circuitLight from "../assets/CircuitBoardLight.svg";
 
 const useStyles = createStyles((theme) => ({
+  bgimg: {
+    backgroundImage: `url(${theme ? circuit : circuitDark})`
+  },
+
   wrapper: {
     position: 'relative',
     paddingBottom: rem(130),
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundImage: meteor,
 
     [theme.fn.smallerThan('xs')]: {
       paddingTop: rem(0),
@@ -71,15 +75,20 @@ const useStyles = createStyles((theme) => ({
 
 export default function Home() {
   const { classes } = useStyles();
+  const { colorScheme } = useMantineColorScheme();
+  const theme = colorScheme === 'dark';
 
   return (
+    <>
+    <BackgroundImage src={theme ? circuitDark : circuitLight}>
     <div className={classes.wrapper}>
-
       <div className={classes.inner}>
         
+        {/* <Image src={meteor}/> */}
         <HomeScroll></HomeScroll>
 
         <Container size={400}>
+          
           <Text size="xl" className={classes.description}>
             🚧 Under construction 🚧
           </Text>
@@ -98,9 +107,12 @@ export default function Home() {
 					Portfolio
 				</Button>
             </Link>
-        {/* </NavLink> */}
+        
         </div>
+      
       </div>
     </div>
+    </BackgroundImage>
+    </>
   );
 }

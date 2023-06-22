@@ -13,6 +13,7 @@ import {
   import { IconCheck } from '@tabler/icons-react';
   import image from '../assets/image.9a65bd94.svg';
   import connections from '../assets/connections.svg'
+  import { NavLink } from 'react-router-dom';
   
   const useStyles = createStyles((theme) => ({
     inner: {
@@ -64,6 +65,11 @@ import {
       borderRadius: theme.radius.sm,
       padding: `${rem(4)} ${rem(12)}`,
     },
+    
+    buttonLink: {
+      color: theme.colors[theme.primaryColor][0],
+      textDecoration: 'none'
+    }
   }));
   
   export function HeroBullets() {
@@ -77,7 +83,7 @@ import {
                 <span className={classes.highlight}>GitG0</span>.io
               </Title>
               <Text color="dimmed" mt="md">
-              👋 Hey there! I'm a software developer with a passion for problem-solving and creating elegant, user-friendly applications. 
+              Hey 👋! I'm a software developer with a passion for problem-solving and creating elegant, user-friendly applications. 
               </Text>
   
               <List
@@ -97,11 +103,13 @@ import {
   
               <Group mt={30}>
                 <Button radius="xl" size="md" className={classes.control}>
-                  Get started
+                  <NavLink to="/contactMe" className={classes.buttonLink}>
+                    Contact me! 
+                  </NavLink>
                 </Button>
-                <Button variant="default" radius="xl" size="md" className={classes.control}>
+                {/* <Button variant="default" radius="xl" size="md" className={classes.control}>
                   Source code
-                </Button>
+                </Button> */}
               </Group>
             </div>
             {/* <Image src="https://images.unsplash.com/photo-1627552245715-77d79bbf6fe2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=640&q=80" className={classes.image} /> */}
