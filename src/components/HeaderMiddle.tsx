@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import { createStyles, Header, Group, ActionIcon, Container, Burger, rem, Transition, Paper } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
 import ThemeToggle from './ThemeToggle';
 import { NavLink } from 'react-router-dom';
+import { MainLogo } from '../assets/MainLogo';
 
 const HEADER_HEIGHT = rem(56);
 
@@ -12,7 +12,7 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    height: rem(56), //CHANGE
+    height: rem(56),
 
     [theme.fn.smallerThan('sm')]: {
       justifyContent: 'flex-start',
@@ -132,7 +132,9 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
           {items}
         </Group>
 
-        {/* <Image src='../assets/react.svg'/> */}
+        <NavLink to="/">
+          <MainLogo/>
+        </NavLink>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">

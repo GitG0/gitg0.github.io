@@ -1,5 +1,5 @@
 import { createStyles, Text, Container, ActionIcon, Group, rem } from '@mantine/core';
-import { IconBrandTwitter, IconBrandYoutube, IconBrandInstagram } from '@tabler/icons-react';
+import { IconBrandGithub } from '@tabler/icons-react';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -130,29 +130,16 @@ export function FooterLinks({ data }: FooterLinksProps) {
 
   return (
     <footer className={classes.footer}>
-      <Container className={classes.inner}>
-        <div className={classes.logo}>
-          {/* <MantineLogo size={30} /> */}
-          <Text size="xs" color="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
-          </Text>
-        </div>
-        <div className={classes.groups}>{groups}</div>
-      </Container>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+          © {new Date().getFullYear()} GitG0. All rights reserved.
         </Text>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
-            <IconBrandTwitter size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandYoutube size="1.05rem" stroke={1.5} />
-          </ActionIcon>
-          <ActionIcon size="lg">
-            <IconBrandInstagram size="1.05rem" stroke={1.5} />
+            <a href="https://github.com/GitG0"> 
+              <IconBrandGithub size="1.1rem" stroke={1.5} />
+            </a>
           </ActionIcon>
         </Group>
       </Container>

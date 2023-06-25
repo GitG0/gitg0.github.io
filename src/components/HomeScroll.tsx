@@ -1,7 +1,9 @@
 import "../assets/homeScroll.css"
 import { useMantineColorScheme, createStyles  } from '@mantine/core'
-import lightbg from "../assets/homeCodeLight.png"
-import darkbg from "../assets/homeCode2.png"
+// import lightbg from "../assets/homeCodeLight.png"
+// import darkbg from "../assets/homeCode2.png"
+import lightbg from "../assets/LightCode.png"
+import darkbg from "../assets/DarkCode.png"
 
 const useStyles = createStyles((theme) => ({
     textContainer: {
@@ -14,37 +16,21 @@ const useStyles = createStyles((theme) => ({
 
     scrollText: {
         "font-size": "300px",
-        // "-webkit-transform":"scale(1,1.5)",
-        // "WebkitTransform": "scale(1,1.5)",
-        // "MozTransform": "scale(1,1.5)",
-        // "MsTransform": "scale(1,1.5)",
-        // "OTransform": "scale(1,1.5)",
-        // "transform": "scale(1,1.5)",
 
         [theme.fn.smallerThan('xl')]: {
             "font-size": "250px",
         },
-
         [theme.fn.smallerThan('lg')]: {
             "font-size": "200px",
         },
-
         [theme.fn.smallerThan('md')]: {
             "font-size": "150px",
         },
-
         [theme.fn.smallerThan('sm')]: {
             "font-size": "100px",
           },
-
         [theme.fn.smallerThan('xs')]: {
             "font-size": "75px",
-            // "-webkit-transform":"scale(1,3)",
-            // "WebkitTransform": "scale(1,3)",
-            // "MozTransform": "scale(1,3)",
-            // "MsTransform": "scale(1,3)",
-            // "OTransform": "scale(1,3)",
-            // "transform": "scale(1,3)"
         },
     }
 }));

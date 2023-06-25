@@ -11,8 +11,6 @@ import {
     rem,
   } from '@mantine/core';
   import { IconCheck } from '@tabler/icons-react';
-  import image from '../assets/image.9a65bd94.svg';
-  import connections from '../assets/connections.svg'
   import { NavLink } from 'react-router-dom';
   
   const useStyles = createStyles((theme) => ({
@@ -107,12 +105,8 @@ import {
                     Contact me! 
                   </NavLink>
                 </Button>
-                {/* <Button variant="default" radius="xl" size="md" className={classes.control}>
-                  Source code
-                </Button> */}
               </Group>
             </div>
-            {/* <Image src="https://images.unsplash.com/photo-1627552245715-77d79bbf6fe2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=640&q=80" className={classes.image} /> */}
             <Image src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg" className={classes.image} />
           </div>
         </Container>

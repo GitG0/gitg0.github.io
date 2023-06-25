@@ -6,7 +6,6 @@ import { FooterLinks } from "../components/FooterLinks";
 import { linkData } from "../assets/linkData";
 import { footerData } from "../assets/footerData";
 
-
 const Layout = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
   const toggleColorScheme = (value?: ColorScheme) =>

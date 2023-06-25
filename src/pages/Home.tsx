@@ -1,14 +1,12 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import HomeScroll from "../components/HomeScroll";
-import { Text, Container, Button, Overlay, createStyles, rem, BackgroundImage, Image, useMantineColorScheme } from '@mantine/core';
-import meteor from "../assets/Meteor.svg";
-import circuit from "../assets/CircuitBoard.svg";
+import { Text, Container, Button, createStyles, rem, BackgroundImage, useMantineColorScheme } from '@mantine/core';
 import circuitDark from "../assets/CircuitBoardDark.svg";
 import circuitLight from "../assets/CircuitBoardLight.svg";
 
 const useStyles = createStyles((theme) => ({
   bgimg: {
-    backgroundImage: `url(${theme ? circuit : circuitDark})`
+    backgroundImage: `url(${theme ? circuitLight : circuitDark})`
   },
 
   wrapper: {
@@ -45,10 +43,6 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
-
-    // [theme.fn.smallerThan('xs')]: {
-    //   flexDirection: 'column',
-    // },
   },
 
   control: {
@@ -66,8 +60,6 @@ const useStyles = createStyles((theme) => ({
 
     [theme.fn.smallerThan('xs')]: {
       '&:not(:first-of-type)': {
-        // marginTop: theme.spacing.md,
-        // marginLeft: 0,
       },
     },
   }
@@ -84,32 +76,27 @@ export default function Home() {
     <div className={classes.wrapper}>
       <div className={classes.inner}>
         
-        {/* <Image src={meteor}/> */}
         <HomeScroll></HomeScroll>
 
         <Container size={400}>
-          
           <Text size="xl" className={classes.description}>
             🚧 Under construction 🚧
           </Text>
         </Container>
 
         <div className={classes.controls}>
-        
-        <Link to="/about" className={classes.buttonLink}>
-				<Button size="lg" className={classes.control}>
-					About
-				</Button>
-			</Link>
+        <NavLink to="/about" className={classes.buttonLink}>
+          <Button size="lg" className={classes.control}>
+            About
+          </Button>
+        </NavLink>
           
-            <Link to="/portfolio" className={classes.buttonLink}>
-				<Button size="lg" className={classes.control}>
-					Portfolio
-				</Button>
-            </Link>
-        
+        <NavLink to="/portfolio" className={classes.buttonLink}>
+          <Button size="lg" className={classes.control}>
+            Portfolio
+          </Button>
+        </NavLink>
         </div>
-      
       </div>
     </div>
     </BackgroundImage>
