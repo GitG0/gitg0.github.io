@@ -1,0 +1,1 @@
+.text-container{height:50vh;display:flex;justify-content:center;align-items:center}.text-container h1{color:#e1e1e103;background-repeat:repeat;-webkit-background-clip:text;animation:animate 200s ease-in-out infinite;text-align:center;font-weight:900}@keyframes animate{0%{background-position:0 0}to{background-position:0 10000%}}
