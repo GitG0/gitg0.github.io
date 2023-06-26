@@ -18,19 +18,19 @@ const useStyles = createStyles((theme) => ({
         "font-size": "275px",
 
         [theme.fn.smallerThan('xl')]: {
-            "font-size": "250px",
+            "font-size": "240px",
         },
         [theme.fn.smallerThan('lg')]: {
-            "font-size": "200px",
+            "font-size": "195px",
         },
         [theme.fn.smallerThan('md')]: {
-            "font-size": "150px",
+            "font-size": "145px",
         },
         [theme.fn.smallerThan('sm')]: {
-            "font-size": "100px",
+            "font-size": "95px",
           },
         [theme.fn.smallerThan('xs')]: {
-            "font-size": "75px",
+            "font-size": "70px",
         },
     }
 }));
