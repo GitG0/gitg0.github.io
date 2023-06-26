@@ -15,7 +15,7 @@ const useStyles = createStyles((theme) => ({
     },
 
     scrollText: {
-        "font-size": "300px",
+        "font-size": "275px",
 
         [theme.fn.smallerThan('xl')]: {
             "font-size": "250px",

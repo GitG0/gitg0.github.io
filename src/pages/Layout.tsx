@@ -17,7 +17,7 @@ const Layout = () => {
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
     <MantineProvider theme={{ 
       colorScheme,
-      fontFamily: 'Fira Code',
+      fontFamily: 'Roboto Mono',
       white: '#DFDBE5',
       cursorType: 'default',
       colors: {
