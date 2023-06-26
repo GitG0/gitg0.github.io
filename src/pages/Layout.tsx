@@ -4,7 +4,8 @@ import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core
 import { HeaderMiddle } from "../components/HeaderMiddle";
 import { FooterLinks } from "../components/FooterLinks";
 import { linkData } from "../assets/linkData";
-import { footerData } from "../assets/footerData";
+import { CustomFonts } from '../components/CustomFonts';
+// import { footerData } from "../assets/footerData";
 
 const Layout = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -16,7 +17,7 @@ const Layout = () => {
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
     <MantineProvider theme={{ 
       colorScheme,
-      fontFamily: 'Consolas',
+      fontFamily: 'Fira Code',
       white: '#DFDBE5',
       cursorType: 'default',
       colors: {
@@ -26,8 +27,9 @@ const Layout = () => {
       }} withGlobalStyles withNormalizeCSS>
       <HeaderMiddle links = { linkData }></HeaderMiddle>
       <Outlet />
-      <FooterLinks data = { footerData }></FooterLinks>
+      <FooterLinks></FooterLinks>
     </MantineProvider>
+    <CustomFonts/>
     </ColorSchemeProvider>
     </>
   )

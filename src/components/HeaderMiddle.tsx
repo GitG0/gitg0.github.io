@@ -1,6 +1,6 @@
 import { createStyles, Header, Group, ActionIcon, Container, Burger, rem, Transition, Paper } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandGithub } from '@tabler/icons-react';
 import ThemeToggle from './ThemeToggle';
 import { NavLink } from 'react-router-dom';
 import { MainLogo } from '../assets/MainLogo';

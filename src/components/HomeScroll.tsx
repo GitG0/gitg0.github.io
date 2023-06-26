@@ -42,7 +42,7 @@ export default function HomeScroll(){
 
     return (        
         <div className="text-container" >
-            <h1 className={classes.scrollText} style={{backgroundImage: `url(${theme ? lightbg : darkbg})`}}>GitG0.io</h1>
+            <h1 className={classes.scrollText} style={{backgroundImage: `url(${theme ? lightbg : darkbg})`}}>GITG0.IO</h1>
         </div>
     )
 }

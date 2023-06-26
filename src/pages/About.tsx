@@ -1,4 +1,4 @@
-import { HeroBullets } from "../components/HeroBullets";
+// import { HeroBullets } from "../components/HeroBullets";
 
 export default function Home(){
     return(

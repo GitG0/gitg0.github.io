@@ -12,7 +12,6 @@
     -webkit-background-clip: text;
     animation: animate 200s ease-in-out infinite;
     text-align: center;
-    text-transform: uppercase;
     font-weight: 900;
   }
   
