@@ -9,6 +9,7 @@ import {
     List,
     ThemeIcon,
     rem,
+    BackgroundImage
   } from '@mantine/core';
   import { IconCheck } from '@tabler/icons-react';
   import { NavLink } from 'react-router-dom';
@@ -18,7 +19,7 @@ import {
       display: 'flex',
       justifyContent: 'space-between',
       paddingTop: `calc(${theme.spacing.xl} * 4)`,
-      paddingBottom: `calc(${theme.spacing.xl} * 4)`,
+      paddingBottom: `calc(${theme.spacing.xl} * 10)`,
     },
   
     content: {
@@ -74,6 +75,7 @@ import {
     const { classes } = useStyles();
     return (
       <div>
+        <BackgroundImage src="https://weblium.com/blog/wp-content/uploads/2020/09/Design-7.png">
         <Container>
           <div className={classes.inner}>
             <div className={classes.content}>
@@ -81,7 +83,7 @@ import {
                 <span className={classes.highlight}>GitG0</span>.io
               </Title>
               <Text color="dimmed" mt="md">
-              Hey 👋! I'm a software developer with a passion for problem-solving and creating elegant, user-friendly applications. 
+              Hey 👋! I'm a web developer with a passion for problem-solving and creating elegant, user-friendly applications. 
               </Text>
   
               <List
@@ -107,9 +109,10 @@ import {
                 </Button>
               </Group>
             </div>
-            <Image src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg" className={classes.image} />
+            {/* <Image src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg" className={classes.image} /> */}
           </div>
         </Container>
+        </BackgroundImage>
       </div>
     );
   }
