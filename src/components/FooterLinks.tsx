@@ -1,5 +1,6 @@
 import { createStyles, Text, Container, ActionIcon, Group, rem } from '@mantine/core';
 import { IconBrandGithub } from '@tabler/icons-react';
+import { MainLogo } from '../assets/MainLogo';
 
 const useStyles = createStyles((theme) => ({
   footer: {
@@ -12,6 +13,16 @@ const useStyles = createStyles((theme) => ({
     }`,
   },
 
+  // des: {
+  //   maxWidth: rem(200),
+
+  //   [theme.fn.smallerThan('sm')]: {
+  //     display: 'flex',
+  //     flexDirection: 'column',
+  //     alignItems: 'center',
+  //   },
+  // },
+
   logo: {
     maxWidth: rem(200),
 
@@ -23,7 +34,9 @@ const useStyles = createStyles((theme) => ({
   },
 
   description: {
-    marginTop: rem(5),
+    // marginTop: rem(5),
+    maxWidth: rem(202),
+    textAlign: 'right',
 
     [theme.fn.smallerThan('sm')]: {
       marginTop: theme.spacing.xs,
@@ -102,6 +115,15 @@ export function FooterLinks() {
 
   return (
     <footer className={classes.footer}>
+      <Container className={classes.inner}>
+        <div className={classes.logo}>
+          <MainLogo></MainLogo>
+        </div>
+        <Text size="xs" color="dimmed" className={classes.description}>
+            Built with React.js + Mantine. Hosted on GitHub pages, repo -{'>'} <a href='https://github.com/GitG0/gitg0.github.io'>gitg0.io</a>
+        </Text>
+      </Container>
+
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
           © {new Date().getFullYear()} GitG0. All rights reserved.
