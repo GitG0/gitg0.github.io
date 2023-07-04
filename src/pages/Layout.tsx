@@ -5,6 +5,7 @@ import { HeaderMiddle } from "../components/HeaderMiddle";
 import { FooterLinks } from "../components/FooterLinks";
 import { linkData } from "../assets/linkData";
 import { CustomFonts } from '../components/CustomFonts';
+import { Notifications } from '@mantine/notifications';
 // import { footerData } from "../assets/footerData";
 
 const Layout = () => {
@@ -25,6 +26,7 @@ const Layout = () => {
       },
       primaryColor: 'brand',
       }} withGlobalStyles withNormalizeCSS>
+      <Notifications />
       <HeaderMiddle links = { linkData }></HeaderMiddle>
       <Outlet />
       <FooterLinks></FooterLinks>
