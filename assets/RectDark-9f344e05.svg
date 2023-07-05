@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1440" height="600" preserveAspectRatio="none" viewBox="0 0 1440 600">
+    <g mask="url(&quot;#SvgjsMask1061&quot;)" fill="none">
+        <rect width="1440" height="600" x="0" y="0" fill="url(&quot;#SvgjsLinearGradient1062&quot;)"></rect>
+        <path d="M34 600L634 0L778 0L178 600z" fill="url(&quot;#SvgjsLinearGradient1063&quot;)"></path>
+        <path d="M514.2 600L1114.2 0L1409.7 0L809.7 600z" fill="url(&quot;#SvgjsLinearGradient1063&quot;)"></path>
+        <path d="M1375 600L775 0L551.5 0L1151.5 600z" fill="url(&quot;#SvgjsLinearGradient1064&quot;)"></path>
+        <path d="M939.8 600L339.79999999999995 0L-8.200000000000045 0L591.8 600z" fill="url(&quot;#SvgjsLinearGradient1064&quot;)"></path>
+        <path d="M937.2120609125082 600L1440 97.2120609125082L1440 600z" fill="url(&quot;#SvgjsLinearGradient1063&quot;)"></path>
+        <path d="M0 600L502.7879390874918 600L 0 97.2120609125082z" fill="url(&quot;#SvgjsLinearGradient1064&quot;)"></path>
+    </g>
+    <defs>
+        <mask id="SvgjsMask1061">
+            <rect width="1440" height="600" fill="#ffffff"></rect>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" gradientUnits="userSpaceOnUse" id="SvgjsLinearGradient1062">
+            <stop stop-color="rgba(26, 27, 30, 1)" offset="0"></stop>
+            <stop stop-color="rgba(37, 38, 43, 1)" offset="1"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="SvgjsLinearGradient1063">
+            <stop stop-color="rgba(11, 0, 31, 1)" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba(11, 0, 31, 1)" offset="0.66"></stop>
+        </linearGradient>
+        <linearGradient x1="100%" y1="100%" x2="0%" y2="0%" id="SvgjsLinearGradient1064">
+            <stop stop-color="rgba(11, 0, 31, 1)" offset="0"></stop>
+            <stop stop-opacity="0" stop-color="rgba(11, 0, 31, 1)" offset="0.66"></stop>
+        </linearGradient>
+    </defs>
+</svg>
