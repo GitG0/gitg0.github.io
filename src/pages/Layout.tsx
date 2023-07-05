@@ -2,11 +2,10 @@ import { useState } from 'react';
 import { Outlet } from "react-router-dom";
 import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core'
 import { HeaderMiddle } from "../components/HeaderMiddle";
-import { FooterLinks } from "../components/FooterLinks";
 import { linkData } from "../assets/linkData";
+import { FooterLinks } from "../components/FooterLinks";
 import { CustomFonts } from '../components/CustomFonts';
 import { Notifications } from '@mantine/notifications';
-// import { footerData } from "../assets/footerData";
 
 const Layout = () => {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -14,7 +13,6 @@ const Layout = () => {
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
   return (
-    <>
     <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
     <MantineProvider theme={{ 
       colorScheme,
@@ -27,13 +25,12 @@ const Layout = () => {
       primaryColor: 'brand',
       }} withGlobalStyles withNormalizeCSS>
       <Notifications />
-      <HeaderMiddle links = { linkData }></HeaderMiddle>
+      <HeaderMiddle links = { linkData }/>
       <Outlet />
       <FooterLinks></FooterLinks>
     </MantineProvider>
     <CustomFonts/>
     </ColorSchemeProvider>
-    </>
   )
 };
 

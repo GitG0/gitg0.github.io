@@ -9,21 +9,6 @@ const useStyles = createStyles((theme) => ({
     backgroundImage: `url(${theme ? circuitLight : circuitDark})`
   },
 
-  wrapper: {
-    position: 'relative',
-    paddingBottom: rem(130),
-
-    [theme.fn.smallerThan('xs')]: {
-      paddingTop: rem(0),
-      paddingBottom: rem(30),
-    },
-  },
-
-  inner: {
-    position: 'relative',
-    zIndex: 1,
-  },
-
   highlight: {
     color: theme.colors[theme.primaryColor][4],
   },
@@ -43,6 +28,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
+    paddingBottom: rem(56),
   },
 
   control: {
@@ -71,11 +57,7 @@ export default function Home() {
   const theme = colorScheme === 'dark';
 
   return (
-    <>
-    <BackgroundImage src={theme ? circuitDark : circuitLight}>
-    <div className={classes.wrapper}>
-      <div className={classes.inner}>
-        
+    <BackgroundImage src={theme ? circuitDark : circuitLight}>        
         <HomeScroll></HomeScroll>
 
         <Container size={400}>
@@ -97,9 +79,6 @@ export default function Home() {
           </Button>
         </NavLink>
         </div>
-      </div>
-    </div>
     </BackgroundImage>
-    </>
   );
 }
