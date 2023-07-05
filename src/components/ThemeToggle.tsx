@@ -11,8 +11,9 @@ export default function ThemeToggle() {
       color={dark ? 'yellow' : 'blue'}
       onClick={() => toggleColorScheme()}
       title="Toggle color scheme"
+      size="md"
     >
-      {dark ? <IconSun size="1.1rem" /> : <IconMoonStars size="1.1rem" />}
+      {dark ? <IconSun size={20} stroke={1.5}/> : <IconMoonStars size={20} stroke={1.5}/>}
     </ActionIcon>
   );
 }

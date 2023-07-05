@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Outlet } from "react-router-dom";
 import { MantineProvider, ColorSchemeProvider, ColorScheme } from '@mantine/core'
 import { HeaderMiddle } from "../components/HeaderMiddle";
-import { linkData } from "../assets/linkData";
+import { linkData } from "../mockData/linkData";
 import { FooterLinks } from "../components/FooterLinks";
 import { CustomFonts } from '../components/CustomFonts';
 import { Notifications } from '@mantine/notifications';

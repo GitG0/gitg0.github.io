@@ -1,11 +1,10 @@
-import { TextInput, Textarea, SimpleGrid, Group, Title, Button, Notification } from '@mantine/core';
-// import { useForm } from '@mantine/form';
-import { useForm, ValidationError } from '@formspree/react';
+import { TextInput, Textarea, SimpleGrid, Group, Title, Button, Text } from '@mantine/core';
+import { useForm } from '@formspree/react';
 import { notifications } from '@mantine/notifications';
 
 export function ContactForm() {
-    const [state, handleSubmit] = useForm("mvojpjqb");
-    if (state.succeeded) {
+    const [state, handleSubmit] = useForm("xleyeeje");
+    if (state.succeeded){
         notifications.show({
             title: 'Form successfully submitted',
             message: 'Thank you!',
@@ -21,8 +20,9 @@ export function ContactForm() {
         weight={900}
         align="center"
       >
-        Get in touch
+        -Get in touch-
       </Title>
+      <Text align="center">Whether it be a future opportunity or a question you have, feel free to reach out via the form below!</Text>
 
       <SimpleGrid cols={2} mt="xl" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
         <TextInput
@@ -32,6 +32,7 @@ export function ContactForm() {
           placeholder="Your email"
           name="email"
           variant="filled"
+          required
         />
       </SimpleGrid>
 
@@ -41,6 +42,7 @@ export function ContactForm() {
         mt="md"
         name="subject"
         variant="filled"
+        required
       />
       <Textarea
         mt="md"
@@ -51,10 +53,11 @@ export function ContactForm() {
         autosize
         name="message"
         variant="filled"
+        required
       />
 
       <Group position="center" mt="xl">
-        <Button type="submit" size="md">
+        <Button type="submit" size="md" disabled={state.submitting}>
           Send message
         </Button>
       </Group>

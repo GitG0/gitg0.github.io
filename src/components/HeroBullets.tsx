@@ -1,6 +1,5 @@
 import {
     createStyles,
-    Image,
     Container,
     Title,
     Button,
@@ -9,7 +8,6 @@ import {
     List,
     ThemeIcon,
     rem,
-    BackgroundImage
   } from '@mantine/core';
   import { IconCheck } from '@tabler/icons-react';
   import { NavLink } from 'react-router-dom';
@@ -19,7 +17,7 @@ import {
       display: 'flex',
       justifyContent: 'space-between',
       paddingTop: `calc(${theme.spacing.xl} * 4)`,
-      paddingBottom: `calc(${theme.spacing.xl} * 10)`,
+      paddingBottom: `calc(${theme.spacing.xl} * 4)`,
     },
   
     content: {
@@ -74,8 +72,6 @@ import {
   export function HeroBullets() {
     const { classes } = useStyles();
     return (
-      <div>
-        <BackgroundImage src="https://weblium.com/blog/wp-content/uploads/2020/09/Design-7.png">
         <Container>
           <div className={classes.inner}>
             <div className={classes.content}>
@@ -83,10 +79,10 @@ import {
                 <span className={classes.highlight}>GitG0</span>.io
               </Title>
               <Text color="dimmed" mt="md">
-              Hey 👋! I'm a web developer with a passion for problem-solving and creating elegant, user-friendly applications. 
+              Hi 👋! I'm a current web developer with an interest in working with front-end frameworks and responsive web design. Below you can find a little more about me or contact me directly.
               </Text>
   
-              <List
+              <List 
                 mt={30}
                 spacing="sm"
                 size="sm"
@@ -97,7 +93,13 @@ import {
                 }
               >
                 <List.Item>
-                  <b>Web development</b> – Experience working with a variety of languages and frameworks, including HTML, CSS, JavaScript, React, and Node.js
+                  <b>Web development</b> – Experience working with a variety of web languages and frameworks, including HTML, CSS, JavaScript, React and Node.js.
+                </List.Item>
+                <List.Item>
+                  <b>My stack</b> – In terms of personal coding projects I prefer Java as it's the one I have the most experience with. I've also worked with Python, C++ and C#.
+                </List.Item>
+                <List.Item>
+                  <b>Recreational</b> – Bouldering, cycling and swimming take up my spare time nowadays! I also really enjoy snowboarding and skating in the winter.
                 </List.Item>
               </List>
   
@@ -109,10 +111,7 @@ import {
                 </Button>
               </Group>
             </div>
-            {/* <Image src="https://ui.mantine.dev/_next/static/media/image.9a65bd94.svg" className={classes.image} /> */}
           </div>
         </Container>
-        </BackgroundImage>
-      </div>
     );
   }

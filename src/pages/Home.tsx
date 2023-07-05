@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
-    paddingBottom: rem(56),
+    paddingBottom: rem(150),
   },
 
   control: {

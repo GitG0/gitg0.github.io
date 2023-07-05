@@ -1,10 +1,9 @@
-import { createStyles, Text, Container, ActionIcon, Group, rem } from '@mantine/core';
+import { createStyles, Text, Container, ActionIcon, Group, rem, Anchor } from '@mantine/core';
 import { IconBrandGithub } from '@tabler/icons-react';
 import { MainLogo } from '../assets/MainLogo';
 
 const useStyles = createStyles((theme) => ({
   footer: {
-    // marginTop: rem(120),
     paddingTop: `calc(${theme.spacing.xl} * 2)`,
     paddingBottom: `calc(${theme.spacing.xl} * 2)`,
     backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
@@ -13,29 +12,18 @@ const useStyles = createStyles((theme) => ({
     }`,
   },
 
-  // des: {
-  //   maxWidth: rem(200),
-
-  //   [theme.fn.smallerThan('sm')]: {
-  //     display: 'flex',
-  //     flexDirection: 'column',
-  //     alignItems: 'center',
-  //   },
-  // },
-
   logo: {
     maxWidth: rem(200),
 
     [theme.fn.smallerThan('sm')]: {
-      display: 'flex',
+      display: 'none',
       flexDirection: 'column',
       alignItems: 'center',
     },
   },
 
   description: {
-    // marginTop: rem(5),
-    maxWidth: rem(202),
+    maxWidth: rem(150),
     textAlign: 'right',
 
     [theme.fn.smallerThan('sm')]: {
@@ -120,7 +108,7 @@ export function FooterLinks() {
           <MainLogo></MainLogo>
         </div>
         <Text size="xs" color="dimmed" className={classes.description}>
-            Built with React.js + Mantine. Hosted on GitHub pages, repo -{'>'} <a href='https://github.com/GitG0/gitg0.github.io'>gitg0.io</a>
+            Built with <Anchor href="https://react.dev/">React.js</Anchor> + <Anchor href="https://mantine.dev/">Mantine.ui</Anchor>. Hosted on <Anchor href="https://pages.github.com/">GitHub pages</Anchor>.
         </Text>
       </Container>
 
@@ -132,7 +120,7 @@ export function FooterLinks() {
         <Group spacing={0} className={classes.social} position="right" noWrap>
           <ActionIcon size="lg">
             <a href="https://github.com/GitG0"> 
-              <IconBrandGithub size="1.1rem" stroke={1.5} />
+              <IconBrandGithub stroke={1.5} size={30}/>
             </a>
           </ActionIcon>
         </Group>

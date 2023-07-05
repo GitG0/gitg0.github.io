@@ -8,6 +8,12 @@ import { MainLogo } from '../assets/MainLogo';
 const HEADER_HEIGHT = rem(56);
 
 const useStyles = createStyles((theme) => ({
+  header:{
+    [theme.fn.smallerThan('sm')]: {
+      mb: 56,
+    },
+  },
+  
   inner: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -106,7 +112,6 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
   const { classes } = useStyles();
 
   const items = links.map((link) => (
-    <>
       <NavLink key={link.label}
         to={link.link}
         className={({ isActive }) => isActive ? classes.linkActive : classes.link}
@@ -114,11 +119,10 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
       >
         {link.label}
       </NavLink>
-    </>
   ));
 
   return (
-    <Header height={56} mb={56}>
+    <Header height={56} mb={56} className={classes.header}>
       <Container className={classes.inner}>
         <Burger opened={opened} onClick={toggle} size="sm" className={classes.burger} />
         <Transition transition="pop-top-right" duration={200} mounted={opened}>
@@ -137,9 +141,9 @@ export function HeaderMiddle({ links }: HeaderMiddleProps) {
         </NavLink>
 
         <Group spacing={0} className={classes.social} position="right" noWrap>
-          <ActionIcon size="lg">
+          <ActionIcon size="md">
             <a href="https://github.com/GitG0"> 
-              <IconBrandGithub size="1.1rem" stroke={1.5} />
+              <IconBrandGithub stroke={1.5} size={20}/>
             </a>
           </ActionIcon>
 

@@ -1,36 +1,27 @@
 import "../assets/homeScroll.css"
 import { useMantineColorScheme, createStyles  } from '@mantine/core'
-// import lightbg from "../assets/homeCodeLight.png"
-// import darkbg from "../assets/homeCode2.png"
 import lightbg from "../assets/LightCode.png"
 import darkbg from "../assets/DarkCode.png"
 
 const useStyles = createStyles((theme) => ({
-    textContainer: {
-        "height": "50vh",
-        "width": "100vw",
-        "display": "flex",
-        "justifyContent": "center",
-        "alignItems": "center"
-    },
 
     scrollText: {
-        "font-size": "275px",
+        fontSize: "275px",
 
         [theme.fn.smallerThan('xl')]: {
-            "font-size": "240px",
+            fontSize: "240px",
         },
         [theme.fn.smallerThan('lg')]: {
-            "font-size": "195px",
+            fontSize: "195px",
         },
         [theme.fn.smallerThan('md')]: {
-            "font-size": "145px",
+            fontSize: "145px",
         },
         [theme.fn.smallerThan('sm')]: {
-            "font-size": "95px",
+            fontSize: "95px",
           },
         [theme.fn.smallerThan('xs')]: {
-            "font-size": "70px",
+            fontSize: "70px",
         },
     }
 }));

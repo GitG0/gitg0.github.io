@@ -8,31 +8,42 @@ import {
     SimpleGrid,
     Container,
     rem,
+    Anchor,
+    BackgroundImage,
+    useMantineColorScheme
   } from '@mantine/core';
-  import { IconGauge, IconUser, IconCookie } from '@tabler/icons-react';
-  
+  import { IconBrandGit, } from '@tabler/icons-react';
+  import RectLight from "../assets/RectLight.svg";
+  import RectDark from "../assets/RectDark.svg";
+
   const mockdata = [
     {
-      title: 'Extreme performance',
+      title: 'gitg0.github.io',
+      link: 'https://github.com/GitG0/gitg0.github.io',
       description:
-        'This dust is actually a powerful poison that will even make a pro wrestler sick, Regice cloaks itself with frigid air of -328 degrees Fahrenheit',
-      icon: IconGauge,
+        'My personal webpage and portfolio. Here you can find links to past projects and a little more about me. Currently being built 🏗',
+      icon: IconBrandGit,
+      badge: 'Typescript',
+      stars: '1'
     },
     {
-      title: 'Privacy focused',
+      title: 'ProjectWixs',
+      link: 'https://github.com/DrayWilliams1/ProjectWixs',
       description:
-        'People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma',
-      icon: IconUser,
-    },
-    {
-      title: 'No third parties',
-      description:
-        'They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves',
-      icon: IconCookie,
+        'A content management system capstone project. ',
+      icon: IconBrandGit,
+      badge: 'JavaScript',
+      stars: '3'
     },
   ];
   
   const useStyles = createStyles((theme) => ({
+    inner: {
+      justifyContent: 'space-between',
+      paddingTop: `calc(${theme.spacing.xl} * 1)`,
+      paddingBottom: `calc(${theme.spacing.xl} * 6)`,
+    },
+
     title: {
       fontSize: rem(34),
       fontWeight: 900,
@@ -78,38 +89,52 @@ import {
   
   export default function Portfolio() {
     const { classes, theme } = useStyles();
+    const { colorScheme } = useMantineColorScheme();
+    const theme2 = colorScheme === 'dark';
     const features = mockdata.map((feature) => (
       <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
         <feature.icon size={rem(50)} stroke={2} color={theme.fn.primaryColor()} />
-        <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
-          {feature.title}
-        </Text>
+        <Group position="apart" mt="md" mb="xs">
+          <Text fz="lg" fw={500} className={classes.cardTitle} mt="md">
+            <Anchor href={feature.link}> {feature.title} </Anchor>
+          </Text>
+          <Badge variant="light">
+            Public
+          </Badge>
+        </Group>
+
         <Text fz="sm" c="dimmed" mt="sm">
           {feature.description}
         </Text>
+        <Badge size="xs">
+          {feature.badge}
+        </Badge>
+        <Badge size="xs">
+          ⭐{feature.stars}
+        </Badge>
       </Card>
     ));
   
     return (
+      <BackgroundImage src={theme2 ? RectDark : RectLight}>
+        <div className={classes.inner}>
       <Container size="lg" py="xl">
         <Group position="center">
-          {/* <Badge variant="filled" size="lg">
-            Best company ever
-          </Badge> */}
         </Group>
   
         <Title order={2} className={classes.title} ta="center" mt="sm">
-          My portfolio
+          Past work
         </Title>
   
         <Text c="dimmed" className={classes.description} ta="center" mt="md">
-          Every once in a while, you’ll see a Golbat that’s missing some fangs. This happens when
-          hunger drives it to try biting a Steel-type Pokémon.
+          Some of my past projects that have a public Github repository.
         </Text>
   
         <SimpleGrid cols={3} spacing="xl" mt={50} breakpoints={[{ maxWidth: 'md', cols: 1 }]}>
           {features}
         </SimpleGrid>
       </Container>
+      </div>
+      </BackgroundImage>
     );
   }
