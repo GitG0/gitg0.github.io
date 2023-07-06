@@ -24,7 +24,7 @@ const Layout = () => {
       },
       primaryColor: 'brand',
       }} withGlobalStyles withNormalizeCSS>
-      <Notifications />
+      <Notifications position="top-center"/>
       <HeaderMiddle links = { linkData }/>
       <Outlet />
       <FooterLinks></FooterLinks>

@@ -9,6 +9,7 @@
   .text-container h1{
     color: rgba(225,225,225, .01);
     background-repeat: repeat;
+    -webkit-background-clip: text;
     background-clip: text;
     animation: animate 200s ease-in-out infinite;
     text-align: center;

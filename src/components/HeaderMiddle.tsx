@@ -3,7 +3,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { IconBrandGithub } from '@tabler/icons-react';
 import ThemeToggle from './ThemeToggle';
 import { NavLink } from 'react-router-dom';
-import { MainLogo } from '../assets/MainLogo';
+import { MainLogo } from '../components/MainLogo';
 
 const HEADER_HEIGHT = rem(56);
 

@@ -1,6 +1,6 @@
 import { createStyles, Text, Container, ActionIcon, Group, rem, Anchor } from '@mantine/core';
 import { IconBrandGithub } from '@tabler/icons-react';
-import { MainLogo } from '../assets/MainLogo';
+import { MainLogo } from '../components/MainLogo';
 
 const useStyles = createStyles((theme) => ({
   footer: {
