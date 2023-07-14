@@ -5,6 +5,7 @@ import Home from './pages/Home.tsx';
 import About from './pages/About.tsx';
 import Contact from './pages/Contact.tsx';
 import Portfolio from './pages/Portfolio.tsx';
+import { NoPage } from './pages/NoPage.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <HashRouter>
@@ -14,6 +15,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           <Route path="about" element={<About />}/>
           <Route path="contactMe" element={<Contact />}/>
           <Route path="portfolio" element={<Portfolio />}/>
+          <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
     </HashRouter>
