@@ -4,7 +4,8 @@
 </div>
 
 <h1>gitg0.github.io</h1>
-<h4>Hosted at <a href="gitg0.github.io/">gitg0.github.io/</a>🏗</h4>
+<h4>Hosted at <a href="https://gitg0.github.io/">gitg0.github.io/</a>🏗</h4>
+
 
 <h2>Built with</h2>
 
