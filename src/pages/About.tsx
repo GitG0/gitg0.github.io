@@ -1,5 +1,5 @@
 import { BackgroundImage, useMantineColorScheme } from '@mantine/core';
-import { HeroBullets } from "../components/HeroBullets";
+import { Bullets } from "../components/Bullets";
 import ShapesLight from "../assets/ShapesLight.svg"
 import ShapesDark from "../assets/ShapesDark.svg"
 
@@ -9,7 +9,7 @@ export default function Home(){
     
     return(
         <BackgroundImage src={theme ? ShapesDark : ShapesLight}>
-            <HeroBullets></HeroBullets>
+            <Bullets></Bullets>
         </BackgroundImage>
     );
 }

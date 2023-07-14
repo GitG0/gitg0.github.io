@@ -1,5 +1,5 @@
 import { Global } from '@mantine/core';
-import roboto from '../assets/RobotoMono-VariableFont_wght.ttf'
+import roboto from '../styles/RobotoMono-VariableFont_wght.ttf'
 
 export function CustomFonts() {
   return (

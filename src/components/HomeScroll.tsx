@@ -1,4 +1,4 @@
-import "../assets/homeScroll.css"
+import "../styles/homeScroll.css"
 import { useMantineColorScheme, createStyles  } from '@mantine/core'
 import lightbg from "../assets/LightCode.png"
 import darkbg from "../assets/DarkCode.png"

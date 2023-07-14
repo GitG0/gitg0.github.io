@@ -69,7 +69,7 @@ import {
     }
   }));
   
-  export function HeroBullets() {
+  export function Bullets() {
     const { classes } = useStyles();
     return (
         <Container>
