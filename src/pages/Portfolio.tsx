@@ -12,30 +12,9 @@ import {
     BackgroundImage,
     useMantineColorScheme
   } from '@mantine/core';
-  import { IconBrandGit, } from '@tabler/icons-react';
+  import { TablerIconsProps, } from '@tabler/icons-react';
   import RectLight from "../assets/RectLight.svg";
   import RectDark from "../assets/RectDark.svg";
-
-  const mockdata = [
-    {
-      title: 'gitg0.github.io',
-      link: 'https://github.com/GitG0/gitg0.github.io',
-      description:
-        'My personal webpage and portfolio. Here you can find links to past projects and a little more about me. Currently being built 🏗',
-      icon: IconBrandGit,
-      badge: 'Typescript',
-      stars: '1'
-    },
-    {
-      title: 'ProjectWixs',
-      link: 'https://github.com/DrayWilliams1/ProjectWixs',
-      description:
-        'A content management system capstone project. ',
-      icon: IconBrandGit,
-      badge: 'JavaScript',
-      stars: '3'
-    },
-  ];
   
   const useStyles = createStyles((theme) => ({
     inner: {
@@ -86,12 +65,18 @@ import {
       },
     },
   }));
+
+  type IconType = (props: TablerIconsProps) => JSX.Element;
+
+  interface PortfolioProps {
+    projects : { title: string;  link: string; description: string; icon: IconType; badge: string; stars: number }[];
+  }
   
-  export default function Portfolio() {
+  export default function Portfolio({ projects } : PortfolioProps) {
     const { classes, theme } = useStyles();
     const { colorScheme } = useMantineColorScheme();
     const theme2 = colorScheme === 'dark';
-    const features = mockdata.map((feature) => (
+    const features = projects.map((feature) => (
       <Card key={feature.title} shadow="md" radius="md" className={classes.card} padding="xl">
         <feature.icon size={rem(50)} stroke={2} color={theme.fn.primaryColor()} />
         <Group position="apart" mt="md" mb="xs">
