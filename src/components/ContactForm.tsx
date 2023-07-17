@@ -4,11 +4,20 @@ import { notifications } from '@mantine/notifications';
 
 export function ContactForm() {
     const [state, handleSubmit] = useForm("xleyeeje");
-    if (state.succeeded){
-        notifications.show({
-            title: 'Form successfully submitted',
-            message: 'Thank you!',
-        });
+    const { succeeded, submitting, errors } = state
+
+    if (succeeded){
+      notifications.show({
+        title: 'Form successfully submitted',
+        message: 'Thank you!',
+        color: 'green'
+    });
+    } else if (submitting && errors != null){
+      notifications.show({
+        title: 'Form failed to submit',
+        message: 'Please try again at a later time',
+        color: 'red'
+    });
     }
 
   return (
@@ -57,7 +66,7 @@ export function ContactForm() {
       />
 
       <Group position="center" mt="xl">
-        <Button type="submit" size="md" disabled={state.submitting}>
+        <Button type="submit" size="md" disabled={submitting}>
           Send message
         </Button>
       </Group>

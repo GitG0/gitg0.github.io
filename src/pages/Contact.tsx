@@ -18,7 +18,7 @@ export default function Contact(){
     return (
         <BackgroundImage src={theme ? LuminaryDark : LuminaryLight}>
         <Container size="sm" px="xs" className={classes.inner}>
-            <ContactForm></ContactForm>
+            <ContactForm />
         </Container>
         </BackgroundImage>
     )
